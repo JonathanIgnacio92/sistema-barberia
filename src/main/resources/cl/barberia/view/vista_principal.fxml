@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="cl.barberia.controller.PrincipalController"
+            prefWidth="900" prefHeight="550">
+
+    <top>
+        <VBox spacing="10">
+            <padding><Insets top="15" right="15" bottom="10" left="15"/></padding>
+            <Label text="BARBERÍA - GESTIÓN DE ATENCIONES" styleClass="titulo"/>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Buscar:"/>
+                <TextField fx:id="txtBuscar" promptText="Filtrar por cliente, barbero o servicio..." HBox.hgrow="ALWAYS"/>
+                <Button text="Nueva Atención" onAction="#abrirFormularioNuevo"/>
+                <Button text="Editar" onAction="#abrirFormularioEditar"/>
+                <Button text="Eliminar" onAction="#eliminarSeleccionado" styleClass="btn-eliminar"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaAtenciones">
+            <BorderPane.margin><Insets top="5" right="15" bottom="10" left="15"/></BorderPane.margin>
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="45"/>
+                <TableColumn fx:id="colCliente" text="Cliente" prefWidth="150"/>
+                <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="110"/>
+                <TableColumn fx:id="colFecha" text="Fecha" prefWidth="95"/>
+                <TableColumn fx:id="colHora" text="Hora" prefWidth="80"/>
+                <TableColumn fx:id="colBarbero" text="Barbero" prefWidth="110"/>
+                <TableColumn fx:id="colServicio" text="Servicio" prefWidth="130"/>
+                <TableColumn fx:id="colPrecio" text="Precio ($)" prefWidth="90"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding><Insets top="5" right="15" bottom="15" left="15"/></padding>
+            <Button text="Ver Resumen" onAction="#abrirResumen"/>
+            <Button text="Exportar CSV" onAction="#exportarDatos"/>
+            <Button text="Importar CSV" onAction="#importarDatos"/>
+        </HBox>
+    </bottom>
+</BorderPane>

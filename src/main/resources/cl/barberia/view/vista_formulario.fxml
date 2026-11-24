@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cl.barberia.controller.FormularioController"
+      spacing="12" prefWidth="400">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label fx:id="lblTitulo" text="NUEVA ATENCIÓN" styleClass="titulo"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Cliente:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtCliente" promptText="Ej: Juan Pérez" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono" promptText="Ej: +56912345678" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Fecha:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtFecha" promptText="YYYY-MM-DD" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Hora:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtHora" promptText="HH:MM:SS" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Barbero:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtBarbero" promptText="Ej: Barbero 1" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Servicio:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cmbServicio" maxWidth="Infinity" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <padding><Insets top="10" right="0" bottom="0" left="0"/></padding>
+        <Button text="Cancelar" onAction="#cerrarVentana" styleClass="btn-eliminar"/>
+        <Button text="Guardar" onAction="#guardarAtencion"/>
+    </HBox>
+</VBox>

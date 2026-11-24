@@ -1,0 +1,76 @@
+/* Fondo general oscuro estilo barbería clásica */
+.root {
+    -fx-background-color: #1A1A1A;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Títulos principales en dorado */
+.titulo {
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Etiquetas de texto en blanco */
+.label {
+    -fx-text-fill: #F5F5F5;
+    -fx-font-size: 13px;
+}
+
+/* Campos de texto y selectores */
+.text-field, .combo-box {
+    -fx-background-color: #2B2B2B;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #B87333; /* Cobre */
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+/* Botones principales (Dorado con texto negro) */
+.button {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #1A1A1A;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-padding: 8 15 8 15;
+}
+
+.button:hover {
+    -fx-background-color: #B87333; /* Cambia a cobre al pasar el mouse */
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Botón de eliminar en rojo oscuro */
+.btn-eliminar {
+    -fx-background-color: #8B0000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btn-eliminar:hover {
+    -fx-background-color: #B22222;
+}
+
+/* Tabla de registros */
+.table-view {
+    -fx-background-color: #262626;
+    -fx-border-color: #D4AF37;
+}
+
+.table-view .column-header {
+    -fx-background-color: #111111;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #262626;
+    -fx-text-fill: #FFFFFF;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #B87333;
+}
